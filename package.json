@@ -1,0 +1,23 @@
+{
+  "name": "vittagems-blockchain",
+  "version": "1.0.0",
+  "description": "VittaGems Permissioned Settlement Blockchain Network",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy/deploy-settlement.js --network quorum_local",
+    "deploy:rpc1": "npx hardhat run scripts/deploy/deploy-settlement.js --network quorum_rpc1",
+    "network:start": "cd docker && docker compose up -d",
+    "network:stop": "cd docker && docker compose down",
+    "network:status": "bash scripts/utils/network-status.sh",
+    "network:reset": "bash scripts/utils/reset-network.sh",
+    "network:logs": "cd docker && docker compose logs -f --tail=50"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "ethers": "^6.9.0",
+    "hardhat": "^2.19.0"
+  }
+}

@@ -1,0 +1,44 @@
+# Build artifacts
+artifacts/
+cache/
+node_modules/
+deployments/*.json
+
+# Environment
+.env.production
+.env.staging
+.env
+
+# Chain data (regenerated)
+network/*/data/geth/
+network/*/data/keystore/
+network/*/data/nodekey
+network/*/data/*.json
+network/*/logs/
+
+# Generated configs
+config/genesis.json
+config/static-nodes.json
+config/permissioned-nodes.json
+config/network-info.json
+config/node-keys.json
+
+# Hardhat
+cache/
+artifacts/
+typechain-types/
+
+# Deployments (keep structure, ignore data)
+deployments/*.json
+
+# Docker volumes
+docker/data/
+docker/docker-compose.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

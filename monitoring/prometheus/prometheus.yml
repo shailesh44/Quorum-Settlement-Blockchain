@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'vittagems-validators'
+    static_configs:
+      - targets:
+          - 'validator1:9545'
+          - 'validator2:9545'
+          - 'validator3:9545'
+        labels:
+          role: 'validator'
+
+  - job_name: 'vittagems-rpc'
+    static_configs:
+      - targets:
+          - 'rpc1:9545'
+          - 'rpc2:9545'
+        labels:
+          role: 'rpc'
+
+  - job_name: 'vittagems-bootnode'
+    static_configs:
+      - targets:
+          - 'bootnode:9545'
+        labels:
+          role: 'bootnode'
